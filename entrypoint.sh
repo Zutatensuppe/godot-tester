@@ -41,8 +41,9 @@ mkdir -p ${CUSTOM_DL_PATH}
 rm -rf ${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION}
 rm -f ${CUSTOM_DL_PATH}/${FULL_GODOT_NAME}${GODOT_EXTENSION}.zip
 # setup godot environment
-echo "downloading godot ..."
-yes | wget -q https://downloads.tuxfamily.org/godotengine/${DL_PATH_EXTENSION}${FULL_GODOT_NAME}${GODOT_EXTENSION}.zip -P ${CUSTOM_DL_PATH}
+DL_URL="https://downloads.tuxfamily.org/godotengine/${DL_PATH_EXTENSION}${FULL_GODOT_NAME}${GODOT_EXTENSION}.zip"
+echo "downloading godot from ${DL_URL} ..."
+yes | wget -q ${DL_URL} -P ${CUSTOM_DL_PATH}
 mkdir -p ~/.cache
 mkdir -p ~/.config/godot
 echo "unzipping ..."
