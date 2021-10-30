@@ -13,7 +13,7 @@ MINIMUM_PASSRATE=$7
 GODOT_SERVER_TYPE="headless"
 CUSTOM_DL_PATH="~/custom_dl_folder"
 
-if [ RELEASE_TYPE = "stable" ] ; then
+if [ "$RELEASE_TYPE" = "stable" ] ; then
     DL_PATH_SUFFIX=""
 else
     DL_PATH_SUFFIX="/${RELEASE_TYPE}"
